@@ -35,8 +35,8 @@ async def get_recommendations(train_id_input: TrainIDInput):
     recommendations_list = recommendations.tolist()
     message = f"Для поезда {train_id} подходит следующий маршрут"
     return {
-        "recommended_stations": recommendations_list,
-        "message": f"{message}"
+        "message": f"{message}",
+        "recommended_stations": recommendations_list
     }
 
 
