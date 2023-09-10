@@ -18,13 +18,11 @@ class Client:
                 return result
 
 
-if __name__ == "__main__":
+def get_recomendations(train_id):
     base_url = "http://127.0.0.1:8000"
     client = Client(base_url)
-
-    train_id = "853"
 
     loop = asyncio.get_event_loop()
     result = loop.run_until_complete(client.get_recommendations(train_id))
 
-    print(result)
+    return result
